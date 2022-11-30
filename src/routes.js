@@ -28,7 +28,7 @@ function Routers() {
             },
             {
               path: "/orders",
-              element: <Orders />,
+              element: <Orders/>,
             },
           ],
         },

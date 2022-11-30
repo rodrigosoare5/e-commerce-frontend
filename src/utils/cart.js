@@ -43,7 +43,6 @@
 
       if (entra) cart.push(product);
     } else {
-      console.log("carrinho vazio");
       cart.push(product);
     }
 

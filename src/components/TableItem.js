@@ -9,7 +9,7 @@ function TableItem({ product, index}) {
             <tr key={product.id}>
                 <th scope="row">{index + 1}</th>
                 <th scope="row">
-                    <img src={product.url} style={{ width: '4rem' }} />
+                    <img src={product.image} style={{ width: '4rem' }} />
                 </th>
                 <td>{product.name}</td>
                 <td>
