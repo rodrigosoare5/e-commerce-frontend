@@ -5,7 +5,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {FaCartArrowDown} from  'react-icons/fa';
 
-function NavBarComponent({search}) {
+function NavBarComponent({search, auth, searchFunction}) {
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = e.target[0].value
+    searchFunction(name)
+  }
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -22,17 +29,18 @@ function NavBarComponent({search}) {
               Carrinho
               <FaCartArrowDown/>
               </Nav.Link>
+              {!auth? <Nav.Link href="/login">Login</Nav.Link>: <></>}
           </Nav>
           {search? 
           
-          <Form className="d-flex">
+          <Form className="d-flex" onSubmit={handleSubmit}>
             <Form.Control
               type="search"
               placeholder="Search"
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button type='submit' variant="outline-success">Search</Button>
           </Form>
           : 
           <></>

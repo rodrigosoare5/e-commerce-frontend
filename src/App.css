@@ -41,5 +41,11 @@ label {
 
 .container {
   position: relative;
-  min-height: 67.8vh;
+  min-height: 0vh;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
 }

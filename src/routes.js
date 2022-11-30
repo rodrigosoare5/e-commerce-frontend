@@ -24,11 +24,11 @@ function Routers() {
           children: [
             {
               path: "/cart",
-              element: <Cart />,
+              element: <Cart auth={auth}/>,
             },
             {
               path: "/orders",
-              element: <Orders/>,
+              element: <Orders auth={auth}/>,
             },
           ],
         },
@@ -42,7 +42,7 @@ function Routers() {
         },
         {
             path: "/",
-            element: <Home />,
+            element: <Home auth={auth}/>,
         },
       ])
   

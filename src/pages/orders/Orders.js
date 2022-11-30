@@ -5,10 +5,11 @@ import OrderTable from "../../components/OrderTable";
 import useAxios from "../../utils/axios";
 import { useState, useEffect } from "react";
 
-function Orders(){
+function Orders({auth}){
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
+        document.title ="Histórico"
         getProducts()
       }, [])
 
@@ -25,9 +26,10 @@ function Orders(){
     return(
         <>  
             <Container fluid >
-                <NavBarComponent search={false}/>
-                <h1 className="display-3 text-center">Histórico de pedidos</h1>
-                <OrderTable orders={orders} />
+                <NavBarComponent search={false} auth={auth} />
+                <h1 className="display-3 text-center">Histórico de compras</h1>
+                {orders.length>0?<OrderTable orders={orders}/>: <h1 className="display-4 text-center">Não possui pedidos ainda!</h1>}
+                 
                 <Footer/>
             </Container>
         </>
