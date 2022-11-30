@@ -18,7 +18,7 @@ function TableProduct({products}) {
       <tbody>
         <>
         {products.map((product, index)=>(
-            <TableItem product={product} index={index} key={product.id}/>
+            <TableItem product={product} index={index} key={product.id} />
         ))
         }
         </>

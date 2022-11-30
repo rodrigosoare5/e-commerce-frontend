@@ -5,7 +5,11 @@ import TableProduct from "../../components/TableProduct";
 
 function Cart() {
   const [cart, setCart] = useState([])
-
+  const car = JSON.parse(localStorage.getItem("cart"));
+  let total = 0;
+  car.forEach((item) => {
+    total += item.quantity * item.price;
+  });
   useEffect(() => {
     const car = getCart()
     console.log(car)
@@ -16,10 +20,10 @@ function Cart() {
     <>
       <NavBarComponent />
       <h1 className="display-3 text-center">Carrinho</h1>
-      <TableProduct products={cart}/>
+      <TableProduct products={cart} />
       <div className="row">
         <div className="col text-center">
-          <h4>TOTAL: </h4>
+          <h4>TOTAL: R${total.toFixed(2)}</h4>
         </div>
       </div>
     </>

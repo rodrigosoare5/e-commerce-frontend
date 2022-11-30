@@ -1,7 +1,8 @@
 import { FaPlusCircle, FaMinusCircle, FaTrashAlt } from 'react-icons/fa'
 import { Button } from 'react-bootstrap';
 
-function TableItem({ product, index }) {
+function TableItem({ product, index}) {
+
     return (
         <>
 
