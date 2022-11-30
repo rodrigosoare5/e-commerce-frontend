@@ -14,7 +14,7 @@ export default function ({ setAuth }) {
 
     const executar_login = () => {
         useAxios
-            .post('api/token/', {
+            .post('token/', {
                 username: state.username,
                 password: state.password,
 
@@ -35,7 +35,7 @@ export default function ({ setAuth }) {
         event.preventDefault()
         console.log(state)
             useAxios
-                .post('api/signup/',
+                .post('signup/',
                     JSON.stringify(state)
                 )
                 .then(() => {

@@ -5,6 +5,7 @@ import Home from './pages/home/Home';
 import Cart from './pages/cart/Cart';
 import Login from './pages/login/Login';
 import Signup from "./pages/signup/Signup";
+import Orders from "./pages/orders/Orders";
 
 import { RouterProtected } from "./components/RouterProtected";
 
@@ -25,12 +26,12 @@ function Routers() {
               path: "/cart",
               element: <Cart />,
             },
+            {
+              path: "/orders",
+              element: <Orders />,
+            },
           ],
         },
-        // {
-        //   path: "/sinup",
-        //   element: <Registro setAuth={setAuth} />,
-        // },
         {
           path: "/login",
           element: <Login setAuth={setAuth} />,

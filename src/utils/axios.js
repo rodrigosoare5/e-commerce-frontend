@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = window.location.href.slice(0,21) == 'http://localhost:3000' ? 'http://localhost:8000/' : 'http://20.228.132.55:8000/'
+const baseURL =  'https://ecommerce-api-rodrigo.herokuapp.com/api/'
 
 const useAxios = axios.create({
 	baseURL: baseURL,

@@ -15,7 +15,7 @@ export default function ({ setAuth }) {
 
 
         useAxios
-            .post('api/token/',
+            .post('token/',
                 JSON.stringify(state)
             )
             .then((response) => {
