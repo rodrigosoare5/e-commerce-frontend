@@ -1,6 +1,6 @@
 
 const style = {
-    position: "fixed",
+    position: "relative",
     bottom: 0,
     left: 0,
     width: "100%"
@@ -9,7 +9,7 @@ const style = {
 function Footer(){
     return(
         <>
-                <div class="mt-5 p-4 bg-dark text-white text-center" style={style}>
+                <div className="mt-5 p-4 bg-dark text-white text-center" style={style}>
                     <p>E-commerce by Rodrigo, para fins de teste</p>
                 </div>  
         </>

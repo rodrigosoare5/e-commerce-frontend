@@ -3,12 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {FaCartArrowDown} from  'react-icons/fa';
 
 function NavBarComponent() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">E-Commerce</Navbar.Brand>
+        <Navbar.Brand href="/">E-Commerce</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,7 +18,10 @@ function NavBarComponent() {
             navbarScroll
           >
             <Nav.Link href="#action1">Histórico de compras</Nav.Link>
-            <Nav.Link href="#action2">Carrinho</Nav.Link>
+            <Nav.Link href="/cart">
+              Carrinho
+              <FaCartArrowDown/>
+              </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

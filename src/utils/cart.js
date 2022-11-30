@@ -25,9 +25,9 @@
   
   export const dumpCart = () => localStorage.setItem('cart', [])
 
-  export function handleClick(produto) {
+  export function handleClick(product) {
     let cart = [];
-    produto.quantidade = 1;
+    product.quantity = 1;
     if (localStorage.getItem("cart")) {
       cart = JSON.parse(localStorage.getItem("cart"));
     }
@@ -35,18 +35,21 @@
     if (cart.length > 0) {
       let entra = true;
       cart.forEach((item) => {
-        if (item.id === produto.id) {
-          item.quantidade += produto.quantidade;
+        if (item.id === product.id) {
+          item.quantity += product.quantity;
           entra = false;
         }
       });
 
-      if (entra) cart.push(produto);
+      if (entra) cart.push(product);
     } else {
       console.log("carrinho vazio");
-      cart.push(produto);
+      cart.push(product);
     }
 
-    alert("Produto adicionado ao carrinho");
+    alert("product adicionado ao carrinho");
     localStorage.setItem("cart", JSON.stringify(cart));
   }
+
+
+  
