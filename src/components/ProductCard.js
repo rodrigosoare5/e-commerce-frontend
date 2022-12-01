@@ -13,7 +13,7 @@ function Product({product}) {
   return (
     <>
           <Card >
-              <Card.Img variant="top" src={product.image} style={{ width: '10rem', justifyContent: 'center' }}/>
+              <Card.Img variant="top" src={product.image} style={{ width: '6rem', justifyContent: 'center' }}/>
               <Card.Body>
                   <Card.Title>{product.name}</Card.Title>
                   <Card.Text>

@@ -56,7 +56,7 @@ function Cart({auth}) {
         </>
         : <>
           <TableProduct products={cart} handleDelete={handleDelete}/>
-          <div className="row" style={{ marginTop: "20%" }}>
+          <div className="row" style={{ marginTop: "5%" }}>
             <div className="col text-center">
               <h4>TOTAL da compra: R${total.toFixed(2)} </h4>
               <Form onSubmit={handleSubmit}>
