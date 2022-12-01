@@ -7,7 +7,9 @@ import TableProduct from "../../components/TableProduct";
 import useAxios from "../../utils/axios";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
-import { removeItemFromCart, increaseQuantity, decreaseQuantity } from "../../utils/cart";
+import { FaTrashAlt } from 'react-icons/fa'
+
+import { removeItemFromCart, increaseQuantity, decreaseQuantity, dumpCart } from "../../utils/cart";
 
 function Cart({auth}) {
   const navigate = useNavigate()
@@ -21,6 +23,10 @@ function Cart({auth}) {
   const handleDelete = (itemIndex) => {
     const cartAfterRemoval = removeItemFromCart(itemIndex)
     setCart(cartAfterRemoval)
+  }
+  const handleDumpCart = () => {
+    dumpCart()
+    setCart([])
   }
 
   const handleIncrease = (id) => {
@@ -78,11 +84,14 @@ function Cart({auth}) {
           handleDecrease ={handleDecrease} 
           />
           <div className="row" style={{ marginTop: "2%" }}>
-            <div className="col text-center">
+            <div className="col text-center" style={{paddingLeft:"30%"}}>
               <h4>TOTAL da compra: R${total.toFixed(2)} </h4>
               <Form onSubmit={handleSubmit}>
                 <Button type="submit">FINALIZAR COMPRA</Button>
               </Form>
+            </div>
+            <div className="col text-center" style={{marginRight:"-10%"}}>
+              <Button onClick={()=> handleDumpCart()} variant="secondary">CLEAR<FaTrashAlt /></Button>
             </div>
 
           </div>
