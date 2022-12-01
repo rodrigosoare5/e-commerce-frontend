@@ -24,6 +24,10 @@ function Routers() {
           element: <RouterProtected auth={auth} />,
           children: [
             {
+              path: "/admin",
+              element: <ProductForm auth={auth}/>,
+            },
+            {
               path: "/orders",
               element: <Orders auth={auth}/>,
             },
@@ -45,10 +49,6 @@ function Routers() {
             path: "/",
             element: <Home auth={auth}/>,
         },
-        {
-          path: "/admin",
-          element: <ProductForm auth={auth}/>,
-      },
       ])
   
       return routes
