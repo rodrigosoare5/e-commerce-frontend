@@ -6,6 +6,7 @@ import Cart from './pages/cart/Cart';
 import Login from './pages/login/Login';
 import Signup from "./pages/signup/Signup";
 import Orders from "./pages/orders/Orders";
+import ProductForm from "./pages/product/Product";
 
 import { RouterProtected } from "./components/RouterProtected";
 
@@ -44,6 +45,10 @@ function Routers() {
             path: "/",
             element: <Home auth={auth}/>,
         },
+        {
+          path: "/admin",
+          element: <ProductForm auth={auth}/>,
+      },
       ])
   
       return routes
