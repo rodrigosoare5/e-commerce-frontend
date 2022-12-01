@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL =   "http://127.0.0.1:8000/api/" 
+const baseURL =   "https://ecommerce-api-rodrigo.herokuapp.com/api/" 
 
 const useAxios = axios.create({
 	baseURL: baseURL,
