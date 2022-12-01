@@ -13,8 +13,8 @@ function Product({product}) {
   return (
     <>
           <Card >
-              <Card.Img variant="top" src={product.image} style={{ maxHeight: "100px" }}/>
-              <Card.Body>
+              <Card.Img variant="top" src={product.image} style={{ maxHeight: "100px", minHeight: "80px" }}/>
+              <Card.Body style={{ maxHeight: "100px", minHeight: "80px", overflow:"scroll" }}>
                   <Card.Title>{product.name}</Card.Title>
                   <Card.Text>
                       {product.description}

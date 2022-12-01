@@ -10,7 +10,7 @@ const style = {
 function ProductList({products}) {
     return (    
         <Container style={style}>
-            <Row xs={1} md={6} className="justify-content-md-left">
+            <Row xs={1} md={5} lg={7} className="justify-content-md-left">
               {products.map(product => (
                 <Col key={product.id}>
                   <Product product={product}/>
