@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL =   process.env.API_URL + "api/" 
+const baseURL =   "https://ecommerce-api-rodrigo.herokuapp.com/api/" 
 
 const useAxios = axios.create({
 	baseURL: baseURL,
