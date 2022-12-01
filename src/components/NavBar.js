@@ -24,7 +24,7 @@ function NavBarComponent({search, auth, searchFunction}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/orders">Histórico de compras</Nav.Link>
+            {auth? <Nav.Link href="/orders">Histórico de compras</Nav.Link>: <></>}
             <Nav.Link href="/cart">
               Carrinho
               <FaCartArrowDown/>

@@ -1,7 +1,7 @@
 import Table from 'react-bootstrap/Table';
 import TableItem from './TableItem';
 
-function TableProduct({products, handleDelete}) {
+function TableProduct({products, handleDelete, handleIncrease, handleDecrease}) {
   return (
     <Table responsive>
       <thead>
@@ -18,7 +18,12 @@ function TableProduct({products, handleDelete}) {
       <tbody>
         <>
         {products.map((product, index)=>(
-            <TableItem product={product} index={index} key={product.id} handleDelete={handleDelete} />
+            <TableItem product={product} 
+                       index={index} 
+                       key={product.id} 
+                       handleDelete={handleDelete} 
+                       handleIncrease={handleIncrease}
+                       handleDecrease ={handleDecrease}  />
         ))
         }
         </>

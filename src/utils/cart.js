@@ -15,7 +15,19 @@
     cart.push(item)
     setCart(cart)
   }
-  
+  export const increaseQuantity = (id) =>{
+    const cart = getCart()
+    cart.forEach((item) => item.id === id ? item.quantity ++ : item.quantity);
+    setCart(cart)
+    return cart
+  }
+  export const decreaseQuantity = (id) =>{
+    const cart = getCart()
+    cart.forEach((item) => item.id === id ? item.quantity -- : item.quantity);
+    setCart(cart)
+    return cart
+  }
+
   export const removeItemFromCart = (itemIndex) => {
     const cart = getCart()
     cart.splice(itemIndex, 1)

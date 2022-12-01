@@ -1,7 +1,7 @@
 import { FaPlusCircle, FaMinusCircle, FaTrashAlt } from 'react-icons/fa'
 import { Button } from 'react-bootstrap';
 
-function TableItem({ product, index, handleDelete}) {
+function TableItem({ product, index, handleDelete, handleIncrease, handleDecrease}) {
 
     return (
         <>
@@ -19,9 +19,9 @@ function TableItem({ product, index, handleDelete}) {
                     {product.description}
                 </td>
                 <td>
-                    <Button><FaMinusCircle /></Button>
+                    <Button onClick={() => handleDecrease(product.id)}><FaMinusCircle /></Button>
                     {product.quantity}
-                    <Button><FaPlusCircle /></Button>
+                    <Button onClick={() => handleIncrease(product.id)}><FaPlusCircle /></Button>
                 </td>
 
                 <td>

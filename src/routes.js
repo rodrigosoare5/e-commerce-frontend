@@ -23,14 +23,14 @@ function Routers() {
           element: <RouterProtected auth={auth} />,
           children: [
             {
-              path: "/cart",
-              element: <Cart auth={auth}/>,
-            },
-            {
               path: "/orders",
               element: <Orders auth={auth}/>,
             },
           ],
+        },
+        {
+          path: "/cart",
+          element: <Cart auth={auth}/>,
         },
         {
           path: "/login",
